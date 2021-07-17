@@ -48,7 +48,7 @@ for ii in range(1, 20):
         df2 = pd.DataFrame(
             {
                 "Name_of_Video": [items.find("a")['title']],
-                "publisher": [items.find(class_="so-icon").get_text(strip=True)],
+                "publisher": [items.find_all(class_="so-icon")[3].get_text(strip=True)],
                 "data": [items.find(class_="so-icon time").get_text(strip=True)],
                 "views": [items.find(class_="so-icon watch-num").get_text(strip=True)]
             }
