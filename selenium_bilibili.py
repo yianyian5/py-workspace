@@ -55,4 +55,6 @@ for ii in range(1, 20):
         )
         df1 = pd.concat([df1, df2])
     switch_pages()
+
+driver1.quit()
 df1.to_excel("bilibili.xlsx", sheet_name="video", index=False)
